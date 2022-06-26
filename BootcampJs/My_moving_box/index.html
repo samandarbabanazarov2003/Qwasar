@@ -1,0 +1,23 @@
+<html>
+    <div id="my_box_realtime" style= "background-color: red; position: absolute; right: 70; bottom: 70; min-width: 100px; min-height: 100px"></div>
+    <script type="text/javascript">
+    function myMove() {
+        elem = document.getElementById("my_box_realtime");   
+        pos = 70;
+        id = setInterval(frame, 520);
+        function frame() {
+        if (pos == 0) {
+            clearInterval(id);
+        }
+        else 
+        {
+        pos--;  //++ qisak tepaga yuradi 
+        elem.style.bottom = pos + 'px'; 
+        elem.style.right = pos + 'px'; 
+    }
+  }
+}
+myMove();
+
+    </script>
+</html>
